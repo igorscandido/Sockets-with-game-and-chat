@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>2020/10/28 09:19:19.000.561,=C:\Users\Maicon\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2020/10/28 09:25:16.000.221,=C:\Users\Maicon\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2020/10/28 09:49:08.000.832,=C:\Users\Maicon\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2020/10/28 11:55:51.000.431,=C:\Users\Maicon\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2020/10/30 18:33:09.000.676,=C:\Users\Maicon\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2020/11/16 15:39:45.000.522,=C:\Users\Maicon\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2020/11/17 23:27:57.000.076,=C:\Users\Maicon\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2021/02/19 09:59:46.000.149,=C:\Users\Maicon\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2021/02/19 10:39:08.000.828,C:\Users\Maicon\Documents\Embarcadero\Studio\Projects\Unit1.dfm=D:\Aulas Eletrô\Disciplinas\PC_II ( DElPHI )\JOGO DA VELHA\frmPrincipalU.dfm</Transaction>
+    <Transaction>2021/02/19 10:39:08.000.828,C:\Users\Maicon\Documents\Embarcadero\Studio\Projects\Unit1.pas=D:\Aulas Eletrô\Disciplinas\PC_II ( DElPHI )\JOGO DA VELHA\frmPrincipalU.pas</Transaction>
+    <Transaction>2021/02/19 10:39:18.000.468,C:\Users\Maicon\Documents\Embarcadero\Studio\Projects\Project1.dproj=D:\Aulas Eletrô\Disciplinas\PC_II ( DElPHI )\JOGO DA VELHA\JogoVelha.dproj</Transaction>
+    <Transaction>2021/02/19 11:51:54.000.532,=D:\Aulas Eletrô\Disciplinas\PC_II ( DElPHI )\JOGO DA VELHA\Unit2.pas</Transaction>
+    <Transaction>2021/02/19 11:52:05.000.330,D:\Aulas Eletrô\Disciplinas\PC_II ( DElPHI )\JOGO DA VELHA\Unit2.pas=D:\Aulas Eletrô\Disciplinas\PC_II ( DElPHI )\JOGO DA VELHA\frmConfiguracaoU.pas</Transaction>
+    <Transaction>2021/02/19 11:52:05.000.330,D:\Aulas Eletrô\Disciplinas\PC_II ( DElPHI )\JOGO DA VELHA\Unit2.dfm=D:\Aulas Eletrô\Disciplinas\PC_II ( DElPHI )\JOGO DA VELHA\frmConfiguracaoU.dfm</Transaction>
+    <Transaction>2021/02/19 13:57:25.000.275,=D:\Aulas Eletrô\Disciplinas\PC_II ( DElPHI )\JOGO DA VELHA\ABOUT.pas</Transaction>
+    <Transaction>2021/02/19 14:00:26.000.282,D:\Aulas Eletrô\Disciplinas\PC_II ( DElPHI )\JOGO DA VELHA\ABOUT.dfm=D:\Aulas Eletrô\Disciplinas\PC_II ( DElPHI )\JOGO DA VELHA\frmAboutU.dfm</Transaction>
+    <Transaction>2021/02/19 14:00:26.000.282,D:\Aulas Eletrô\Disciplinas\PC_II ( DElPHI )\JOGO DA VELHA\ABOUT.pas=D:\Aulas Eletrô\Disciplinas\PC_II ( DElPHI )\JOGO DA VELHA\frmAboutU.pas</Transaction>
+    <Transaction>2021/02/19 19:50:39.000.692,=E:\V1.0 Com erros propositais\Untitled1.js</Transaction>
+    <Transaction>2021/03/06 09:46:48.000.034,=D:\Jogo da Velha com Chat\Unit1.pas</Transaction>
+    <Transaction>2021/03/06 09:46:53.000.244,D:\Jogo da Velha com Chat\Unit1.dfm=D:\Jogo da Velha com Chat\dmU.dfm</Transaction>
+    <Transaction>2021/03/06 09:46:53.000.244,D:\Jogo da Velha com Chat\Unit1.pas=D:\Jogo da Velha com Chat\dmU.pas</Transaction>
+    <Transaction>2021/03/06 11:16:24.000.058,=D:\Jogo da Velha com Chat\Unit2.pas</Transaction>
+    <Transaction>2021/03/06 11:16:29.000.454,D:\Jogo da Velha com Chat\Unit2.pas=D:\Jogo da Velha com Chat\frmChatU.pas</Transaction>
+    <Transaction>2021/03/06 11:16:29.000.454,D:\Jogo da Velha com Chat\Unit2.dfm=D:\Jogo da Velha com Chat\frmChatU.dfm</Transaction>
+  </Transactions>
+	<ActiveMobileDevice>
+		<NoProfile iOSSimulator="iPhone5" Android="Nexus_7" Android64="Nexus_7"/>
+	</ActiveMobileDevice>
+</BorlandProject>

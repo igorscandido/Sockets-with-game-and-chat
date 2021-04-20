@@ -1,0 +1,79 @@
+object fChat: TfChat
+  Left = 0
+  Top = 0
+  Caption = 'Jogo da Velha  - Bate Papo'
+  ClientHeight = 307
+  ClientWidth = 355
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'Tahoma'
+  Font.Style = []
+  OldCreateOrder = False
+  OnKeyDown = FormKeyDown
+  PixelsPerInch = 96
+  TextHeight = 13
+  object Panel1: TPanel
+    Left = 0
+    Top = 0
+    Width = 355
+    Height = 256
+    Align = alClient
+    TabOrder = 0
+    object memChat: TMemo
+      Left = 1
+      Top = 1
+      Width = 353
+      Height = 254
+      Align = alClient
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -13
+      Font.Name = 'Tahoma'
+      Font.Style = []
+      ParentFont = False
+      TabOrder = 0
+    end
+  end
+  object Panel2: TPanel
+    Left = 0
+    Top = 256
+    Width = 355
+    Height = 51
+    Align = alBottom
+    TabOrder = 1
+    object edtMsg: TEdit
+      Left = 1
+      Top = 1
+      Width = 271
+      Height = 49
+      Align = alClient
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -16
+      Font.Name = 'Tahoma'
+      Font.Style = []
+      ParentFont = False
+      TabOrder = 0
+      OnKeyDown = edtMsgKeyDown
+      ExplicitHeight = 27
+    end
+    object Button1: TButton
+      Left = 272
+      Top = 1
+      Width = 82
+      Height = 49
+      Align = alRight
+      Caption = 'Enviar'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -11
+      Font.Name = 'Tahoma'
+      Font.Style = [fsBold]
+      ParentFont = False
+      TabOrder = 1
+      OnClick = Button1Click
+    end
+  end
+end

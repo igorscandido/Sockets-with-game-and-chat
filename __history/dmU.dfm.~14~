@@ -1,0 +1,21 @@
+object dmSockets: TdmSockets
+  OldCreateOrder = False
+  Height = 368
+  Width = 512
+  object csClient: TClientSocket
+    Active = False
+    ClientType = ctNonBlocking
+    Port = 45675
+    OnRead = csClientRead
+    Left = 144
+    Top = 152
+  end
+  object ssServer: TServerSocket
+    Active = False
+    Port = 45675
+    ServerType = stNonBlocking
+    OnClientRead = ssServerClientRead
+    Left = 216
+    Top = 152
+  end
+end

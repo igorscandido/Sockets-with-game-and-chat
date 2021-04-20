@@ -1,0 +1,100 @@
+unit dmU;
+
+interface
+
+uses
+  System.SysUtils, System.Classes, System.Win.ScktComp, frmChatU,frmPrincipalU;
+
+type
+  TdmSockets = class(TDataModule)
+    csClient: TClientSocket;
+    ssServer: TServerSocket;
+    procedure csClientRead(Sender: TObject; Socket: TCustomWinSocket);
+    procedure ssServerClientRead(Sender: TObject; Socket: TCustomWinSocket);
+    procedure csClientDisconnect(Sender: TObject; Socket: TCustomWinSocket);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+    Nickname : String;
+  end;
+
+var
+  dmSockets: TdmSockets;
+
+implementation
+
+{%CLASSGROUP 'Vcl.Controls.TControl'}
+
+{$R *.dfm}
+
+// Client on receive
+procedure TdmSockets.csClientDisconnect(Sender: TObject;
+  Socket: TCustomWinSocket);
+begin
+  with frmPrincipalU.fMain do
+  begin
+    BlockTable(true);
+  end;
+end;
+
+procedure TdmSockets.csClientRead(Sender: TObject;
+Socket: TCustomWinSocket);
+var
+  command : String;
+  text : String;
+begin
+
+  text := Socket.ReceiveText;
+
+  command := Copy(text, 0, 4);
+  text := Copy(text, 5 , text.Length - 4);
+
+  if command = 'msg:' then
+  begin
+    with frmChatU.fChat do
+    begin
+      memChat.Lines.Add('');
+      memChat.Lines.Add(text);
+    end;
+  end;
+
+  if command = 'ngm:' then
+  begin
+    with frmPrincipalU.fMain do
+    begin
+      SetPlayer(text[1]);
+      myTurn := false;
+      BlockTable(true);
+    end;
+  end;
+
+
+end;
+
+
+// Server on receive
+procedure TdmSockets.ssServerClientRead(Sender: TObject;
+Socket: TCustomWinSocket);
+var
+  command : String;
+  text : String;
+begin
+
+  text := Socket.ReceiveText;
+
+  command := Copy(text, 0, 4);
+  text := Copy(text, 5 , text.Length - 4);
+
+  if command = 'msg:' then
+  begin
+    with frmChatU.fChat do
+    begin
+      memChat.Lines.Add('');
+      memChat.Lines.Add(text);
+    end;
+  end;
+
+end;
+
+end.

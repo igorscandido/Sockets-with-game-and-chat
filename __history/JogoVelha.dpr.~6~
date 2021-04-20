@@ -1,0 +1,20 @@
+program JogoVelha;
+
+uses
+  Vcl.Forms,
+  frmPrincipalU in 'frmPrincipalU.pas' {Form1},
+  frmConfiguracaoU in 'frmConfiguracaoU.pas' {frmConfiguracao},
+  frmAboutU in 'frmAboutU.pas' {frmAbout},
+  dmU in 'dmU.pas' {dmSockets: TDataModule};
+
+{$R *.res}
+
+begin
+  Application.Initialize;
+  Application.MainFormOnTaskbar := True;
+  Application.CreateForm(TForm1, Form1);
+  Application.CreateForm(TfrmConfiguracao, frmConfiguracao);
+  Application.CreateForm(TfrmAbout, frmAbout);
+  Application.CreateForm(TdmSockets, dmSockets);
+  Application.Run;
+end.

@@ -1,0 +1,109 @@
+Linha 136:
+
+procedure TForm1.IncrementaPlacarX;
+begin
+  PlacarX := PlacarX+1;
+  lblPlacarX.Caption := 'X: ' + IntToStr( PlacarO );    // Linha errada!
+	//Incrementa deveria ser para o PlacarX e não O
+
+end;
+
+################################################################################
+
+Linha 101:
+
+if VerificarVitoria = 'VELHA' then begin
+    IncrementaPlacarTotal;
+    IncrementaPlacarO; // Linha errada
+	//Não se incrementa o O se ele não ganhou
+    ShowMessage('Eita... deu velha!');
+end
+
+################################################################################
+
+Linha 82:
+
+if Uppercase(lblJogador.Caption) = 'O' then
+    MudarJogador('x')  //Erro na capitalização
+else
+    MudarJogador('o'); //Erro na capitalização
+
+Função MudarJogador:
+
+procedure TForm1.MudarJogador(Jogador: String);
+begin
+  if Jogador = 'O' then begin
+    lblJogador.Caption := 'O';
+    lblJogador.Font.Color := clBlue
+  end
+  else begin
+    lblJogador.Caption := 'X';
+    lblJogador.Font.Color := clRed;
+  end;
+
+end;
+
+Ele verifica se o uppercase to label é O, se não ele manda mudar para X, ai beleza, ele faz.
+Porém da proxima vez ele vai verificar se é O, como é X, vai mudar para o(minusculo), pois está errado,
+como não vai ser o Jogador = 'O'(maiúsculo) ele coloca X novamente, e assim entra em um loop eterno.
+
+
+##################################################################################
+
+Linha 89:
+
+if VerificarVitoria = 'O' then begin
+    IncrementaPlacarTotal;
+    IncrementaPlacarO;
+    LimparTabuleiro; // Faltava o limpar tabuleiro
+    ShowMessage('Parabéns! Jogador O venceu.');
+end
+else
+if VerificarVitoria = 'X' then begin
+    IncrementaPlacarTotal;
+    IncrementaPlacarX;
+    LimparTabuleiro; // Faltava o limpar tabuleiro
+    ShowMessage('Parabéns! Jogador X venceu.');
+end
+
+Como não estava limpando, o jogo continuava mesmo tendo terminado, ai no mesmo jogo 2 pessoas podiam ganhar,
+porém como ele verificava o 'O' e depois o 'X', o resultado só ia para o X se ele ganhasse antes
+
+
+
+//Verificar Vitória
+
+  if (
+        (btn11.Caption = 'O') and (btn12.Caption = 'O') and (btn13.Caption = 'O') or // Linha 1
+        (btn21.Caption = 'O') and (btn22.Caption = 'O') and (btn23.Caption = 'O') or // Linha 2
+        (btn31.Caption = 'O') and (btn32.Caption = 'O') and (btn33.Caption = 'O') or // Linha 3
+        (btn11.Caption = 'O') and (btn21.Caption = 'O') and (btn31.Caption = 'O') or // Coluna 1
+        (btn12.Caption = 'O') and (btn22.Caption = 'O') and (btn32.Caption = 'O') or // Coluna 2
+        (btn13.Caption = 'O') and (btn23.Caption = 'O') and (btn33.Caption = 'O') or // Coluna 3
+        (btn11.Caption = 'O') and (btn22.Caption = 'O') and (btn33.Caption = 'O') or // Diagonal 1
+        (btn31.Caption = 'O') and (btn22.Caption = 'O') and (btn13.Caption = 'O')    // Diagonal 2
+     ) then begin
+        Exit;
+  end;
+
+  if (
+        (btn11.Caption = 'X') and (btn12.Caption = 'X') and (btn13.Caption = 'X') or // Linha 1
+        (btn21.Caption = 'X') and (btn22.Caption = 'X') and (btn23.Caption = 'X') or // Linha 2
+        (btn31.Caption = 'X') and (btn32.Caption = 'X') and (btn33.Caption = 'X') or // Linha 3
+        (btn11.Caption = 'X') and (btn21.Caption = 'X') and (btn31.Caption = 'X') or // Coluna 1
+        (btn12.Caption = 'X') and (btn22.Caption = 'X') and (btn32.Caption = 'X') or // Coluna 2
+        (btn13.Caption = 'X') and (btn23.Caption = 'X') and (btn33.Caption = 'X') or // Coluna 3
+        (btn11.Caption = 'X') and (btn22.Caption = 'X') and (btn33.Caption = 'X') or // Diagonal 1
+        (btn31.Caption = 'X') and (btn22.Caption = 'X') and (btn13.Caption = 'X')    // Diagonal 2
+     ) then begin
+        Exit;
+  end;
+
+  if (
+        (btn11.Caption <> '') and (btn12.Caption <> '') and (btn13.Caption <> '') and // Linha 1
+        (btn21.Caption <> '') and (btn22.Caption <> '') and (btn23.Caption <> '') and // Linha 2
+        (btn31.Caption <> '') and (btn32.Caption <> '') and (btn33.Caption <> '')  // Linha 3
+     ) then begin
+        Exit;
+  end;
+
